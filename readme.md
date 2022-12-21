@@ -25,7 +25,7 @@ It is possible to know if the returned type was error or success by asking if it
 
 Constructor function that returns an Either instance of type Left.
 
-### properties
+### property
 
 ```ts
 - value: L
@@ -50,7 +50,7 @@ Constructor function that returns an Either instance of type Left.
 
 Constructor function that returns an Either instance of type Right.
 
-### properties
+### property
 
 ```ts
 - value: R
