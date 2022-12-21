@@ -3,10 +3,18 @@
 Either is a set of functions to generate a monad, the Either monad.
 Its role is to elegantly handle situations that can generate an error.
 
+Using TypeScript features, this package is able to perform type guard through Type Predicate.
+
+The **isLeft()** and **isRight()** methods were made using Type Predicate features to refine TypeScript's type-safety and ensure type safety.
+
+Read more:
+[Advanced Types](https://www.typescriptlang.org/docs/handbook/advanced-types.html)
+
 How it works: Either literally means OR one thing OR the other. You can define that a method can return some types of error or some types of success. Mistake types are on the left and success types are on the right. For example, in the case of creating an email, the method that creates the email can return InvalidEmailError OR the object of type Email successfully created. It is possible to know if the returned type was error or success by asking if it is "right" or "left". That is, if it is "left" it is a type of error, if it is "right" it is a type of success.
 
 - **EitherType<L, R>**:
   Type alias to set a method return to Either. The type variable "L" defines the types of errors separated by pipes "|" and the type variable "R" defines the success type.
+  This typing is only used to help return functions that will return a type of Either e.g. (Left or Right)
 
 ---
 
@@ -71,6 +79,14 @@ Factory function to build an Either object of type Left.
 ## Either.right(aValue: Right): Right<L, R>
 
 Factory function to build an Either object of type Right.
+
+<br>
+
+---
+
+<br>
+
+## Example using left and right
 
 ```ts
 import { Either } from '@cahmoraes93/either'
