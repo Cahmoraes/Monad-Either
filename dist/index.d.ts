@@ -14,11 +14,17 @@ type EitherType<L, R> = Left<L, R> | Right<L, R>;
 declare const left: <L, R>(left: L) => Left<L, R>;
 declare const right: <L, R>(right: R) => Right<L, R>;
 
+type Either_Left<L, R> = Left<L, R>;
+declare const Either_Left: typeof Left;
+type Either_Right<L, R> = Right<L, R>;
+declare const Either_Right: typeof Right;
 type Either_EitherType<L, R> = EitherType<L, R>;
 declare const Either_left: typeof left;
 declare const Either_right: typeof right;
 declare namespace Either {
   export {
+    Either_Left as Left,
+    Either_Right as Right,
     Either_EitherType as EitherType,
     Either_left as left,
     Either_right as right,
