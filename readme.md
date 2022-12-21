@@ -73,13 +73,19 @@ Constructor function that returns an Either instance of type Right.
 
 <br>
 
-## Either.left(aValue: Left): Left<L, R>
+## Factories Left and Right
+
+```ts
+- Either.left<L, R>(aValue: L): Left<L, R>
+```
 
 Factory function to build an Either object of type Left.
 
 <br>
 
-## Either.right(aValue: Right): Right<L, R>
+```ts
+- Either.right<L, R>(aValue: R): Right<L, R>
+```
 
 Factory function to build an Either object of type Right.
 
@@ -133,10 +139,16 @@ function createEmail(): EitherType<InvalidEmailError | InvalidLengthError, strin
 
   if (emailOrError.isLeft()) {
     // handle the error in the best way
+    console.error(emailOrError.value.message)
   }
 
-  // a partir deste ponto o email é válido, é possível omitir a chamada de emailOrError.isRight()
+  /*
+    from this point the email is valid, it is possible to omit the emailOrError.isRight() call
+  */
 
-  console.log(emailOrError.value)
+  if (emailOrError.isRight()) {
+    console.log(emailOrError.value)
+  }
+
 
 ```

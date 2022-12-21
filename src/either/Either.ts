@@ -1,4 +1,4 @@
-class Left<L, R> {
+export class Left<L, R> {
   readonly value: L
   constructor(value: L) {
     this.value = value
@@ -13,7 +13,7 @@ class Left<L, R> {
   }
 }
 
-class Right<L, R> {
+export class Right<L, R> {
   readonly value: R
   constructor(value: R) {
     this.value = value
