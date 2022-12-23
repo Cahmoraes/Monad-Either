@@ -7,7 +7,7 @@
     "functional programming",
     "monad"
   ],
-  "description": "This package implements Monad Either",
+  "description": "This package implements The Monad Either",
   "publishConfig": {
     "access": "public"
   },

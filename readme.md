@@ -98,15 +98,20 @@ Factory function to build an Either object of type Right.
 ## Example using left and right
 
 ```ts
-import { Either } from '@cahmoraes93/either'
+import { Either, EitherType } from '@cahmoraes93/either'
 
-const randomNumber = Math.floor(Math.random() * 10)
+function doThing(): EitherType<EvenNumberException, number> {
+  const randomNumber = Math.floor(Math.random() * 10)
 
-if (randomNumber % 2 === 0) {
-  return Either.left(new EvenNumberException(randomNumber))
+  if (randomNumber % 2 === 0) {
+    // Either.left to return an Error/Exception
+    return Either.left(new EvenNumberException(randomNumber))
+  }
+  // Either.right to return success
+  return Either.right(randomNumber)
 }
 
-return Either.right(randomNumber)
+const result = doThing()
 ```
 
 ## Usage Example
