@@ -7,4 +7,6 @@ tsup.config.ts
 vite.config.ts
 test/
 src/
+jest.config.ts
+babel.config.ts
 .eslintrc.json
