@@ -10,3 +10,6 @@ src/
 jest.config.ts
 babel.config.ts
 .eslintrc.json
+.eslintrc.js
+.prettierrc.json
+babel.config.js
