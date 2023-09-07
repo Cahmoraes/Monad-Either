@@ -1,4 +1,3 @@
-import { describe, it, expect } from '@jest/globals'
 import { Either } from '../src'
 
 describe.only('Either test suite', () => {
