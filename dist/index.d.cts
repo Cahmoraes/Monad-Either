@@ -22,13 +22,7 @@ declare const Either_Right: typeof Right;
 declare const Either_left: typeof left;
 declare const Either_right: typeof right;
 declare namespace Either {
-  export {
-    Either_EitherType as EitherType,
-    Either_Left as Left,
-    Either_Right as Right,
-    Either_left as left,
-    Either_right as right,
-  };
+  export { type Either_EitherType as EitherType, Either_Left as Left, Either_Right as Right, Either_left as left, Either_right as right };
 }
 
-export { Either, EitherType };
+export { Either, type EitherType };
